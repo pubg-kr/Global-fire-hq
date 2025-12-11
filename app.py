@@ -83,7 +83,7 @@ def main():
             rsi_label = "NORMAL"
             if tqqq_rsi >= 80: rsi_label = "MADNESS"
             elif tqqq_rsi >= 75: rsi_label = "WARNING"
-            st.metric("TQQQ RSI (14)", f"{tqqq_rsi:.1f}", rsi_label, delta_color="inverse")
+            st.metric("TQQQ 주봉 RSI (14)", f"{tqqq_rsi:.1f}", rsi_label, delta_color="inverse")
         with c4:
             # TQQQ MDD
             mdd_label = "STABLE"
@@ -103,7 +103,7 @@ def main():
             q_rsi_label = "NORMAL"
             if qqq_rsi >= 75: q_rsi_label = "OVERBOUGHT" # QQQ는 75만 넘어도 과열
             elif qqq_rsi <= 30: q_rsi_label = "OVERSOLD"
-            st.metric("QQQ RSI (14)", f"{qqq_rsi:.1f}", q_rsi_label, delta_color="inverse")
+            st.metric("QQQ 주봉 RSI (14)", f"{qqq_rsi:.1f}", q_rsi_label, delta_color="inverse")
         with qc3:
             # QQQ MDD
             q_mdd_label = "STABLE"
